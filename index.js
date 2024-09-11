@@ -39,10 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
         
         console.log("s " + saisie + " nbl " + nbgrilleMot);
         if(saisie > 0){
-        if(ev.key === "Backspace") {
-                tableGame[saisie-1].innerText = ".";
-                saisie--;
-            }
+        // if(ev.key = "Backspace"){
+        //     console.log(ev.key + "suppression ! " + saisie);
+                
+        //     tableGame[saisie-1].innerText = ".";
+        //     saisie--;
+        //     console.log(saisie);
+        //     }
+
         if(saisie < nbgrilleMot) {
             console.log("actuel " + tableGame[saisie].innerText + " saisie " + ev.key);
 
