@@ -39,13 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
         
         console.log("s " + saisie + " nbl " + nbgrilleMot);
         if(saisie > 0){
-        // if(ev.key = "Backspace"){
-        //     console.log(ev.key + "suppression ! " + saisie);
+            if(ev.key == "Backspace"){
+            console.log(ev.key + "suppression ! " + saisie);
                 
-        //     tableGame[saisie-1].innerText = ".";
-        //     saisie--;
-        //     console.log(saisie);
-        //     }
+            tableGame[saisie - 1].innerText = ".";
+            saisie--;
+            console.log(saisie);
+            return;
+            }
 
         if(saisie < nbgrilleMot) {
             console.log("actuel " + tableGame[saisie].innerText + " saisie " + ev.key);
@@ -64,7 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
             
             console.log("s " + saisie + " nbl " + nbgrilleMot);
             if(saisie > 0){
-            
+            if(ev.target.classList.contains("fa-backspace")){
+            console.log(ev.target.classList + "suppression ! " + saisie);
+                
+            tableGame[saisie - 1].innerText = ".";
+            saisie--;
+            console.log(saisie);
+            return;
+            }
             if( saisie < nbgrilleMot) {
                 
                 console.log("actuel " + tableGame[saisie].innerText + " saisie " + ev.target.innerText);
@@ -80,13 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         };
 
-        const deleteBoutons = document.getElementsByClassName("fa-backspace");
-        if (deleteBoutons.length > 0) {
-            deleteBoutons[0].addEventListener('click', () => {
-                // Supprime la dernière lettre
-                tableGame[saisie].innerText = ".";
-                saisie--;
-            });
-        }
+        // const deleteBoutons = document.getElementsByClassName("fa-backspace");
+        // if (deleteBoutons.length > 0) {
+        //     deleteBoutons[0].addEventListener('click', () => {
+        //         // Supprime la dernière lettre
+        //         tableGame[saisie].innerText = ".";
+        //         saisie--;
+        //     });
         
 }); // fermeture du dom contentloaded(FIN)
