@@ -15,6 +15,18 @@
     
     console.log(mot);
 
-       
+    // génère une grille du nombre de lettres du mot et insère la lettre
+    const nbgrilleMot = mot.length;
+
+    for (let i = 0; i < nbgrilleMot; i++) {
+        const div = document.createElement("div");
+        div.classList.add("lettre");
+        if (i === 0) {div.textContent = mot[0]}
+        else {div.textContent = "."}
+        document.getElementById("tableJeu").appendChild(div);
+    }
+
+    // récupère la lettre saisie par l'utilisateur et l'insère dans la grille à partir de la 2eme div lettre
+     
 
 // });
