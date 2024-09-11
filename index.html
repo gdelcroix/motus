@@ -1,17 +1,148 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <style>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MomoMotus</title>
+		<link rel="stylesheet" href="index.css" />
+		<style>
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
     </style>
-    <link rel="stylesheet" href="index.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MomoMotus</title>
-</head>
-<body>
-    <h1>MomoMotus</h1>
-    
-</body>
-<script src="index.js" ></script>
+    <link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+			integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+		<h1>MomoMotus</h1>
+
+		<div id="entete"></div>
+		<div id="zoneJeu">
+			<div id="tableJeu">
+                <div class="lettre">A</div>
+                <div class="lettre">B</div>
+                <div class="lettre">C</div>
+                <div class="lettre">D</div>
+                <div class="lettre">E</div>
+                <div class="lettre">F</div>
+                <div class="lettre">G</div>
+                <div class="lettre">H</div>
+		    </div>
+        </div>
+		<div id="zoneClavier">
+			<div id="touches">
+				<div class="keyboard">
+					<div class="key-row">
+						<div class="key">
+							<span>A</span>
+						</div>
+						<div class="key">
+							<span>Z</span>
+						</div>
+						<div class="key">
+							<span>E</span>
+						</div>
+						<div class="key">
+							<span>R</span>
+						</div>
+						<div class="key">
+							<span>T</span>
+						</div>
+						<div class="key">
+							<span>Y</span>
+						</div>
+						<div class="key">
+							<span>U</span>
+						</div>
+						<div class="key">
+							<span>I</span>
+						</div>
+						<div class="key">
+							<span>O</span>
+						</div>
+						<div class="key">
+							<span>P</span>
+						</div>
+					</div>
+					<div class="key-row">
+						<div class="key">
+							<span>Q</span>
+						</div>
+						<div class="key">
+							<span>S</span>
+						</div>
+						<div class="key">
+							<span>D</span>
+						</div>
+						<div class="key">
+							<span>F</span>
+						</div>
+						<div class="key">
+							<span>G</span>
+						</div>
+						<div class="key">
+							<span>H</span>
+						</div>
+						<div class="key">
+							<span>J</span>
+						</div>
+						<div class="key">
+							<span>K</span>
+						</div>
+						<div class="key">
+							<span>L</span>
+						</div>
+						<div class="key">
+							<span>M</span>
+						</div>
+					</div>
+					<div class="key-row">
+						<div class="key suppression">
+							<i class="fas fa-backspace"></i>
+						</div>
+						<div class="key">
+							<span>W</span>
+						</div>
+						<div class="key">
+							<span>X</span>
+						</div>
+						<div class="key">
+							<span>C</span>
+						</div>
+						<div class="key">
+							<span>V</span>
+						</div>
+						<div class="key">
+							<span>B</span>
+						</div>
+						<div class="key">
+							<span>N</span>
+						</div>
+						<div class="key valider">
+							<i class="fas fa-sign-in-alt"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="zoneScoreEnCours">
+			<h2>mot actuel :<span id="motActuel">1</span></h2>
+			<h2>nombre de coups restants :<span id="coupsRestants">0</span></h2>
+			<h2>score :<span id="score">0</span></h2>
+		</div>
+		<div id="historique">
+			<h2>nombre de parties :<span id="nbParties">0</span></h2>
+			<h2>nombre de rounds Joués :<span id="nbRounds">0</span></h2>
+			<h2>
+				moyenne de nombre de mots trouvés :<span id="nbMotsTrouves"
+					>0</span
+				>
+			</h2>
+			<h2>moyenne d'essais par round :<span id="nbEssais">0</span></h2>
+		</div>
+	</body>
+	<script src="index.js"></script>
 </html>
