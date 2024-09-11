@@ -1,0 +1,36 @@
+*{
+    /* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 700
+
+.oswald-<uniquifier> {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  */
+
+  font-family: "Oswald", sans-serif;
+  color: white;
+
+}
+
+h1{
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+    padding: 24px;
+    text-shadow: 5px 3px 5px black;
+    text-align: center;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, rgba(7,4,57,1) 0%, rgba(41,41,185,1) 100%);
+}
+
+body {
+    height: 100vh;
+    background: rgb(7,4,57);
+    background: radial-gradient(circle, rgba(7,4,57,1) 6%, rgba(41,41,185,1) 50%, rgba(0,212,255,1) 87%);
+}
