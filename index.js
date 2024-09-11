@@ -6,4 +6,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.createElement('div')
     
 
-});
+}); 
