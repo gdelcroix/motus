@@ -2,6 +2,7 @@
     border: 1px dotted blue;
 } */
 *{
+
 /* // <uniquifier>: Use a unique and descriptive class name
    // <weight>: Use a value from 200 to 700
 .oswald-<uniquifier> {
@@ -66,6 +67,7 @@ h1{
     border-radius: 20px;
     min-height: 30vh;
 }
+
 .lettre{
     border: 5px solid black;
     border-radius: 15px;
@@ -80,15 +82,25 @@ h1{
     border-radius: 10px;
     display: grid;
     width: fit-content;
-    align-items: end;
     margin: 0 auto;
-    justify-content: center;
-    grid-template-columns: repeat(8, auto);
     gap: .5rem;
     padding: .5em;
-    grid-auto-columns: minmax(300px, auto);
 }
 
+.ligne{
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  gap: .5rem;
+  padding: .5em;
+}
+.rouge{
+    background-color: #dd1515}
+.orange{
+    background-color: #ff8800;
+}
 #zoneClavier{
     width: 70%;
     border: 1px solid black;
