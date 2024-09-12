@@ -2,134 +2,132 @@
     border: 1px dotted blue;
 } */
 *{
-/* // <uniquifier>: Use a unique and descriptive class name
-   // <weight>: Use a value from 200 to 700
-.oswald-<uniquifier> {
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  */
-  font-family: "Oswald", sans-serif;
-  color: white;
-}
-
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    height: 100vh;
-    width: 100vw
-    background: rgb(7,4,57);
-    background: radial-gradient(circle, rgba(7,4,57,1) 6%, rgba(41,41,185,1) 50%, rgba(0,212,255,1) 87%);
-}
-
-h1{
-    margin-top: 2em;
-    display: flex;
-    align-self: flex-start;
-    justify-content: center;
-    font-size: 50px;
-    font-weight: 600;
-    line-height: 1.1;
-    margin: 0;
-    padding: 24px;
-    text-shadow: 5px 3px 5px black;
-    text-align: center;
-    border-radius: 10px;
-    background: linear-gradient(to bottom right, rgba(7,4,57,1) 0%, rgba(41,41,185,1) 100%);
-}
-
-#zoneJeu{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-    border-radius: 5px;
-    min-height: 30vh;
-}
-.lettre{
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: .5rem;
-    text-align: center;
-    width: 1.5rem;
-    font-size: x-large;
-}
-
-#tableJeu{
-    border: 1px solid black;
-    border-radius: 5px;
-    display: grid;
-    width: fit-content;
-    align-items: end;
-    margin: 0 auto;
-    justify-content: center;
-    grid-template-columns: repeat(8, auto);
-    gap: .5rem;
-    padding: .5em;
-    grid-auto-columns: minmax(300px, auto);
-}
-
-#zoneClavier{
-    width: 80%;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-.keyboard{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    margin-bottom: .5rem;
-    margin-top: .5rem;
-    width: 100%; 
-}
-.key-row{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: .5rem;
-    margin-bottom: .5rem;
-}
-.key{
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: .5rem;
-    text-align: center;
-    width: 1.5rem;
-    font-size: x-large;
-}
-
-#zoneScoreEnCours{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
-    width: 80%;
-    border: 1px solid black;
-    border-radius: 5px; 
-}
-
-#historique{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    text-wrap: wrap;
-    margin-bottom: .5rem;
-    width: 80%;
-    border: 1px solid black;
-    border-radius: 5px; 
-}
-#historique > h2 {
-    width: 45%;
-}
-
-
+    /* // <uniquifier>: Use a unique and descriptive class name
+       // <weight>: Use a value from 200 to 700
+    .oswald-<uniquifier> {
+      font-family: "Oswald", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: <weight>;
+      font-style: normal;
+      */
+      font-family: "Oswald", sans-serif;
+      color: white;
+    }
+    
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        height: 100vh;
+        width: 100vw;
+        background: rgb(7,4,57);
+        background: radial-gradient(circle, rgba(7,4,57,1) 6%, rgba(41,41,185,1) 50%, rgba(0,212,255,1) 87%);
+    }
+    
+    h1{
+        margin-top: 2em;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        font-size: 50px;
+        font-weight: 600;
+        line-height: 1.1;
+        margin: 0;
+        padding: 24px;
+        text-shadow: 5px 3px 5px black;
+        text-align: center;
+        border-radius: 10px;
+        background: linear-gradient(to bottom right, rgba(7,4,57,1) 0%, rgba(41,41,185,1) 100%);
+    }
+    
+    #zoneJeu{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        border-radius: 5px;
+        min-height: 30vh;
+    }
+    .lettre{
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: .5rem;
+        text-align: center;
+        width: 1.5rem;
+        font-size: x-large;
+    }
+    
+    #tableJeu{
+        border: 1px solid black;
+        border-radius: 5px;
+        display: grid;
+        width: fit-content;
+        align-items: end;
+        margin: 0 auto;
+        justify-content: center;
+        grid-template-columns: repeat(8, auto);
+        gap: .5rem;
+        padding: .5em;
+        grid-auto-columns: minmax(300px, auto);
+    }
+    
+    #zoneClavier{
+        width: 80%;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+    
+    .keyboard{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin-bottom: .5rem;
+        margin-top: .5rem;
+        width: 100%; 
+    }
+    .key-row{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: .5rem;
+        margin-bottom: .5rem;
+    }
+    .key{
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: .5rem;
+        text-align: center;
+        width: 1.5rem;
+        font-size: x-large;
+    }
+    
+    #zoneScoreEnCours{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        width: 80%;
+        border: 1px solid black;
+        border-radius: 5px; 
+    }
+    
+    #historique{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        text-wrap: wrap;
+        margin-bottom: .5rem;
+        width: 80%;
+        border: 1px solid black;
+        border-radius: 5px; 
+    }
+    #historique > h2 {
+        width: 45%;
+    }
