@@ -1,5 +1,6 @@
 // ajoute le dictionnaire stocké dans un fichier distinct
-import { dictionnaire_list } from "C:\Users\MD\Desktop\javascript\motus\dictionnaire.js";
+//import dictionnaire_list from './dictionnaire.js';
+
 
 document.addEventListener("DOMContentLoaded", () => {
 	// on recupère les touches clavier
@@ -24,10 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
     nbEssais = 0;
     let proposition = "";
 
+
+const dictionnaire_list = ["ABACA", "ABATS", "ABBES", "ABCES", "ABDOS", "ABEES", "ABERS", "ABETI", "ABIES", "ABIMA"];
 	// fonction de choix du mot dans le dictionnnaire selon le nombre de lettres
 	function unMotRandom() {
 		const longueur = Math.floor(Math.random() * 4);
-		const liste = dictionnaire_list[longueur];
+		const liste = dictionnaire_list;
 		const indexAleatoire = Math.floor(Math.random() * liste.length);
 		return liste[indexAleatoire];
 	}
