@@ -66,8 +66,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// écoute des saisies clavier physique
 	document.body.addEventListener("keydown", (ev) => {
-		// en cas de saisie de backspace
-		let key = ev.key;
+		// en cas de saisie de touches non autorisées
+		if (ev.key === "Ctrl" || ev.key === "Alt" || ev.key === "Shift" ||
+             ev.key === "Space" || ev.key === "ArrowLeft" || ev.key === "ArrowRight" ||
+              ev.key === "ArrowUp" || ev.key === "ArrowDown" || ev.key === "AltGraph" || ev.key == [0-9]) {
+            
+console.log("filtré : " + ev.key);
+                return;
+            }
+        let key = ev.key;
+
+console.log(key);
+
         const majuscule = key >= "A" && key <= "Z";
         const minuscule = key >= "a" && key <= "z";
         if (minuscule) {
