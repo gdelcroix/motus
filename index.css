@@ -64,17 +64,31 @@ h1{
 #tableJeu{
     border: 1px solid black;
     border-radius: 5px;
-    display: grid;
+    display: block;
+    /* display: grid; */
     width: fit-content;
-    align-items: end;
+    /* align-items: end; */
     margin: 0 auto;
-    justify-content: center;
-    grid-template-columns: repeat(8, auto);
+    /* justify-content: center; */
+    /* grid-template-columns: repeat(8, auto); */
     gap: .5rem;
     padding: .5em;
-    grid-auto-columns: minmax(300px, auto);
+    /* grid-auto-columns: minmax(300px, auto); */
 }
-
+.ligne{
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  gap: .5rem;
+  padding: .5em;
+}
+.rouge{
+    background-color: #dd1515}
+.orange{
+    background-color: #ff8800;
+}
 #zoneClavier{
     width: 80%;
     border: 1px solid black;
