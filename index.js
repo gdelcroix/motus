@@ -29,4 +29,4 @@
             console.log(clavier[i].innerText);
         });
     };
-});
+
