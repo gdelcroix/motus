@@ -1,5 +1,5 @@
 // ajoute le dictionnaire stocké dans un fichier distinct
-import { dictionnaire_list } from "./dictionnaire.js";
+import { dictionnaire_list } from "C:\Users\MD\Desktop\javascript\motus\dictionnaire.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	// on recupère les touches clavier
