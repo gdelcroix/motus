@@ -15,15 +15,34 @@
   color: white;
 }
 
+i {
+    color: black;
+}
+
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-grow: 1;
-    background: rgb(7,4,57);
-    background: radial-gradient(circle, rgba(7,4,57,1) 6%, rgba(41,41,185,1) 50%, rgba(0,212,255,1) 87%);
+    background: rgba(7,4,57,1);
+    background: radial-gradient(circle,rgba(41,41,185,1) 0%, rgba(0,212,255,1)) 100%;
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
 }
+
+@keyframes color{
+    0%{
+        background-position: 0 50% ;
+    }
+    50%{
+        background-position: 100% 50% ;
+    }
+    100%{
+        background-position: 0 50% ;
+    }
+}
+
 
 h1{
     margin-top: 2em;
@@ -37,8 +56,28 @@ h1{
     padding: 24px;
     text-shadow: 5px 3px 5px black;
     text-align: center;
+    border: 2px solid transparent;
     border-radius: 10px;
+    animation: borderAnimation 4s infinite;
     background: linear-gradient(to bottom right, rgba(7,4,57,1) 0%, rgba(41,41,185,1) 100%);
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: red;
+    }
+    25% {
+        border-color: rgb(255, 183, 0);
+    }
+    50% {
+        border-color: rgb(175, 52, 30);
+    }
+    75% {
+        border-color: rgb(255, 136, 0);
+    }
+    100% {
+        border-color: red;
+    }
 }
 
 .title-styleSquare{
@@ -57,7 +96,8 @@ h1{
 }
 
 #zoneJeu{
-    margin-top: 5vh;
+    margin-top: 10vh;
+    margin-bottom: 3vh;
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -65,6 +105,7 @@ h1{
     justify-content: center;
     border: 1px solid black;
     border-radius: 20px;
+    box-shadow: rgba(7,4,57,1) 10px 0px 10px 10px;
     min-height: 30vh;
 }
 
@@ -78,8 +119,6 @@ h1{
 }
 
 #tableJeu{
-    border: 3px solid black;
-    border-radius: 10px;
     display: grid;
     width: fit-content;
     margin: 0 auto;
@@ -103,8 +142,6 @@ h1{
 }
 #zoneClavier{
     width: 70%;
-    border: 1px solid black;
-    border-radius: 10px;
 }
 i{color: #000000 !important;
 }
@@ -127,13 +164,18 @@ i{color: #000000 !important;
 }
 .key{
     border: 3px solid rgb(0, 0, 0);
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 5px 2px 2px 5px rgba(7,4,57,1);
     padding: .5rem;
     text-align: center;
     width: 1.5rem;
     font-size: x-large;
     background-color: aliceblue;
    
+}
+
+.key:hover {
+    background-color: rgb(97, 87, 87);
 }
 
 .key > span {
@@ -163,4 +205,8 @@ i{color: #000000 !important;
 }
 #historique > h2 {
     width: 45%;
+}
+
+i{
+    color: black;
 }
