@@ -313,5 +313,3 @@ function startConfetti() {
 			clearInterval(interval);
 			}, 2000);
 		}
-		
-	
