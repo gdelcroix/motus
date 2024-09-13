@@ -36,8 +36,8 @@
 
 	// fonction de choix du mot dans le dictionnnaire selon le nombre de lettres
 	function unMotRandom() {
-		const longueur = Math.floor(Math.random() * 4);
-		const liste = dictionnaire_list;
+		/*const longueur = Math.floor(Math.random() * 4);*/
+		const liste = dictionnaire_list/*[longueur]*/;
 		const indexAleatoire = Math.floor(Math.random() * liste.length);
 		return liste[indexAleatoire];
 	}
