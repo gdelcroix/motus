@@ -2,6 +2,7 @@
     border: 1px dotted blue;
 } */
 *{
+
 /* // <uniquifier>: Use a unique and descriptive class name
    // <weight>: Use a value from 200 to 700
 .oswald-<uniquifier> {
@@ -20,8 +21,6 @@ body{
     align-items: center;
     justify-content: center;
     flex-grow: 1;
-    height: 100vh;
-    width: 100vw;
     background: rgb(7,4,57);
     background: radial-gradient(circle, rgba(7,4,57,1) 6%, rgba(41,41,185,1) 50%, rgba(0,212,255,1) 87%);
 }
@@ -42,19 +41,36 @@ h1{
     background: linear-gradient(to bottom right, rgba(7,4,57,1) 0%, rgba(41,41,185,1) 100%);
 }
 
+.title-styleSquare{
+    background-color: rgb(221, 21, 21);
+    width: 3.5vw;
+    border-radius: 50px 50px 50px 50px;
+    text-shadow: 1px 1px 1px 1px ;
+}
+
+#title-styleRound{
+    background-color: rgb(255, 136, 0);
+    width: 3.5vw;
+    border-radius: 5px;
+    text-shadow: 1px 1px 1px 1px;
+
+}
+
 #zoneJeu{
-    width: 80%;
+    margin-top: 5vh;
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 20px;
     min-height: 30vh;
 }
+
 .lettre{
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 5px solid black;
+    border-radius: 15px;
     padding: .5rem;
     text-align: center;
     width: 1.5rem;
@@ -62,19 +78,15 @@ h1{
 }
 
 #tableJeu{
-    border: 1px solid black;
-    border-radius: 5px;
-    display: block;
-    /* display: grid; */
+    border: 3px solid black;
+    border-radius: 10px;
+    display: grid;
     width: fit-content;
-    /* align-items: end; */
     margin: 0 auto;
-    /* justify-content: center; */
-    /* grid-template-columns: repeat(8, auto); */
     gap: .5rem;
     padding: .5em;
-    /* grid-auto-columns: minmax(300px, auto); */
 }
+
 .ligne{
   display: flex;
   width: fit-content;
@@ -90,9 +102,11 @@ h1{
     background-color: #ff8800;
 }
 #zoneClavier{
-    width: 80%;
+    width: 70%;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+i{color: #000000 !important;
 }
 
 .keyboard{
@@ -112,12 +126,18 @@ h1{
     margin-bottom: .5rem;
 }
 .key{
-    border: 1px solid black;
+    border: 3px solid rgb(0, 0, 0);
     border-radius: 5px;
     padding: .5rem;
     text-align: center;
     width: 1.5rem;
     font-size: x-large;
+    background-color: aliceblue;
+   
+}
+
+.key > span {
+    color: black;
 }
 
 #zoneScoreEnCours{
@@ -127,8 +147,7 @@ h1{
     margin-top: .5rem;
     margin-bottom: .5rem;
     width: 80%;
-    border: 1px solid black;
-    border-radius: 5px; 
+    text-decoration: underline;
 }
 
 #historique{
@@ -138,9 +157,9 @@ h1{
     justify-content: space-evenly;
     text-wrap: wrap;
     margin-bottom: .5rem;
-    width: 80%;
-    border: 1px solid black;
-    border-radius: 5px; 
+    width: 70%;
+    border: 3px solid black;
+    border-radius: 15px; 
 }
 #historique > h2 {
     width: 45%;
