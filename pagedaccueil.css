@@ -1,0 +1,181 @@
+*{
+
+    /* // <uniquifier>: Use a unique and descriptive class name
+       // <weight>: Use a value from 200 to 700
+    .oswald-<uniquifier> {
+      font-family: "Oswald", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: <weight>;
+      font-style: normal;
+      */
+      font-family: "Oswald", sans-serif;
+      color: white;
+}
+
+
+body {
+    background: linear-gradient(-60deg, rgba(7,4,57,1) 6%, rgba(41,41,185,1) 50%, rgba(0,212,255,1) 87%);
+    background-size: 400% 400%;
+    animation: gradient 6s ease-in-out infinite;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+        
+@keyframes gradient {
+    0% {
+    background-position: 0% 50%;
+    }
+    50% {
+    background-position: 100% 50%;
+    }
+    100% {
+    background-position: 0% 50%;
+    }
+}
+
+
+h1{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-size: 90px;
+    font-weight: 700;
+    padding: 24px;
+    text-shadow: 5px 3px 5px black;
+    text-align: center;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, rgba(7,4,57,1) 0%, rgba(41,41,185,1) 100%);
+}
+
+.title-styleSquare{
+    background-color: rgb(221, 21, 21);
+    width: 6.5vw;
+    border-radius: 50px 50px 50px 50px;
+    text-shadow: 1px 1px 1px 1px ;
+}
+
+#title-styleRound{
+    background-color: rgb(255, 136, 0);
+    width: 6.5vw;
+    border-radius: 5px;
+    text-shadow: 1px 1px 1px 1px;
+
+}
+
+button{
+    border: 0;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 20px 50px;
+    height: 10vh;
+    font-size: 30px;
+    cursor : pointer;
+    box-shadow: 0px -0px 0px 0px rgba(143, 64, 248, .5), 0px 0px 0px 0px rgba(39, 200, 255, -5);
+    margin-bottom: 30vh;    
+
+}
+    
+
+ 
+button::after{
+    content:"";
+    width : 400px;
+    height: 360px;
+    background:linear-gradient(360deg, #27d86c 0%, #26caf8 50%, #c625d0 100%);
+    position: absolute;
+    top : -150%;
+    left: -90px;
+    z-index: -1;
+    transition: all .20s;
+    font: white;
+}
+ 
+button:hover::after{
+
+    transform: rotate(200deg);
+    font: white;
+}
+ 
+button:hover{
+    transform: translate(0, -6px);
+    box-shadow: 20%;
+}
+ 
+ 
+a{
+   color:white;
+   text-decoration: none;
+}
+
+.contact-icon{
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    margin-right: 10px;
+
+}
+
+.contact-info{
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.contact-info img:hover {
+    transform: scale(1.1);
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 10px ;
+}
+
+.social-media img{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.footer {
+display: flex;
+flex-direction: column;
+justify-content: center;
+position: absolute;
+color: white;
+left: 0;
+padding: 10px 20px;
+bottom: 0;
+width: 100vw;
+
+}
+
+footer p {
+margin: 0;
+padding: 0;
+}
+
+
+.copyright {
+    font-size: x-small;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.legal-info {
+    font-size: x-small;
+    
+    margin-top: 5px;
+
+    color: white;
+}

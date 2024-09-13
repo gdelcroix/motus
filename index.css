@@ -15,6 +15,10 @@
   color: white;
 }
 
+i {
+    color: black;
+}
+
 body{
     display: flex;
     flex-direction: column;
