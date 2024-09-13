@@ -1,6 +1,3 @@
-/* *{
-    border: 1px dotted blue;
-} */
 *{
 
     /* // <uniquifier>: Use a unique and descriptive class name
@@ -13,194 +10,189 @@
       */
       font-family: "Oswald", sans-serif;
       color: white;
+}
+
+
+body {
+    background: linear-gradient(-60deg, rgba(7,4,57,1) 6%, rgba(41,41,185,1) 50%, rgba(0,212,255,1) 87%);
+    background-size: 400% 400%;
+    animation: gradient 6s ease-in-out infinite;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+        
+@keyframes gradient {
+    0% {
+    background-position: 0% 50%;
     }
+    50% {
+    background-position: 100% 50%;
+    }
+    100% {
+    background-position: 0% 50%;
+    }
+}
+
+
+h1{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-size: 90px;
+    font-weight: 700;
+    padding: 24px;
+    text-shadow: 5px 3px 5px black;
+    text-align: center;
+    border-radius: 10px;
+
+    border: 5px solid transparent;
+    box-shadow: 10px 10px 10px 10px rgba(7,4,57,1) ;
+    animation: borderAnimation 2s linear infinite;
+    background: linear-gradient(to bottom right, rgba(7,4,57,1) 0%, rgba(41,41,185,1) 100%);
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: red;
+    }
+    25% {
+        border-color: rgb(255, 183, 0);
+    }
+    50% {
+        border-color: rgb(175, 52, 30);
+    }
+    75% {
+        border-color: rgb(255, 136, 0);
+    }
+    100% {
+        border-color: red;
+    }
+}
+.title-styleSquare{
+    background-color: rgb(221, 21, 21);
+    width: 6.5vw;
+    border-radius: 50px 50px 50px 50px;
+    text-shadow: 1px 1px 1px 1px ;
+}
+
+#title-styleRound{
+    background-color: rgb(255, 136, 0);
+    width: 6.5vw;
+    border-radius: 5px;
+    text-shadow: 1px 1px 1px 1px;
+
+}
+
+button{
+    border: 0;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 20px 50px;
+    height: 10vh;
+    font-size: 30px;
+    cursor : pointer;
+    box-shadow: 5px -0px 5px 0px rgba(143, 64, 248, .5), 0px 5px 0px 5px rgba(39, 200, 255, -5);
+    margin-bottom: 30vh;
+}
+ 
+button::after{
+    content:"";
+    width : 400px;
+    height: 360px;
+    background:linear-gradient(360deg, #27d86c 0%, #26caf8 50%, #c625d0 100%);
+    position: absolute;
+    top : -150%;
+    left: -90px;
+    z-index: -1;
+    transition: all .20s;
+    font: white;
+}
+ 
+button:hover::after{
+    transform: rotate(200deg);
+    font: white;
+}
+ 
+button:hover{
+    transform: translate(0, -6px);
+    box-shadow: 20%;
+}
+ 
+ 
+a{
+   color:white;
+   text-decoration: none;
+}
+
+.contact-icon{
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    margin-right: 10px;
+
+}
+
+.contact-info{
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.contact-info img:hover {
+    transform: scale(1.1);
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 10px ;
+}
+
+.social-media img{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.footer {
+display: flex;
+flex-direction: column;
+justify-content: center;
+position: absolute;
+color: white;
+left: 0;
+padding: 10px 20px;
+bottom: 0;
+width: 100vw;
+
+}
+
+footer p {
+margin: 0;
+padding: 0;
+}
+
+
+.copyright {
+    font-size: x-small;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.legal-info {
+    font-size: x-small;
     
-    body{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        flex-grow: 1;
-        background: rgba(7,4,57,1);
-        background: radial-gradient(circle,rgba(41,41,185,1) 0%, rgba(0,212,255,1)) 100%;
-        background-size: 300% 300%;
-        animation: color 12s ease-in-out infinite;
-    }
-    
-    @keyframes color{
-        0%{
-            background-position: 0 50% ;
-        }
-        50%{
-            background-position: 100% 50% ;
-        }
-        100%{
-            background-position: 0 50% ;
-        }
-    }
-    
-    
-    h1{
-        margin-top: 2em;
-        display: flex;
-        align-self: center;
-        justify-content: center;
-        font-size: 50px;
-        font-weight: 600;
-        line-height: 1.1;
-        margin: 0;
-        padding: 24px;
-        text-shadow: 5px 3px 5px black;
-        text-align: center;
-        border: 2px solid transparent;
-        border-radius: 10px;
-        animation: borderAnimation 4s infinite;
-        background: linear-gradient(to bottom right, rgba(7,4,57,1) 0%, rgba(41,41,185,1) 100%);
-    }
-    
-    @keyframes borderAnimation {
-        0% {
-            border-color: red;
-        }
-        25% {
-            border-color: rgb(255, 183, 0);
-        }
-        50% {
-            border-color: rgb(175, 52, 30);
-        }
-        75% {
-            border-color: rgb(255, 136, 0);
-        }
-        100% {
-            border-color: red;
-        }
-    }
-    
-    .title-styleSquare{
-        background-color: rgb(221, 21, 21);
-        width: 3.5vw;
-        border-radius: 50px 50px 50px 50px;
-        text-shadow: 1px 1px 1px 1px ;
-    }
-    
-    #title-styleRound{
-        background-color: rgb(255, 136, 0);
-        width: 3.5vw;
-        border-radius: 5px;
-        text-shadow: 1px 1px 1px 1px;
-    
-    }
-    
-    #zoneJeu{
-        margin-top: 10vh;
-        margin-bottom: 3vh;
-        width: 70%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid black;
-        border-radius: 20px;
-        box-shadow: rgba(7,4,57,1) 10px 0px 10px 10px;
-        min-height: 30vh;
-    }
-    
-    .lettre{
-        border: 5px solid black;
-        border-radius: 15px;
-        padding: .5rem;
-        text-align: center;
-        width: 1.5rem;
-        font-size: x-large;
-    }
-    
-    #tableJeu{
-        display: grid;
-        width: fit-content;
-        margin: 0 auto;
-        gap: .5rem;
-        padding: .5em;
-    }
-    
-    .ligne{
-      display: flex;
-      width: fit-content;
-      align-items: center;
-      margin: 0 auto;
-      justify-content: center;
-      gap: .5rem;
-      padding: .5em;
-    }
-    .rouge{
-        background-color: #dd1515}
-    .orange{
-        background-color: #ff8800;
-    }
-    #zoneClavier{
-        width: 70%;
-    }
-    
-    .keyboard{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        margin-bottom: .5rem;
-        margin-top: .5rem;
-        width: 100%; 
-    }
-    .key-row{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        gap: .5rem;
-        margin-bottom: .5rem;
-    }
-    .key{
-        border: 3px solid rgb(0, 0, 0);
-        border-radius: 10px;
-        box-shadow: 5px 2px 2px 5px rgba(7,4,57,1);
-        padding: .5rem;
-        text-align: center;
-        width: 1.5rem;
-        font-size: x-large;
-        background-color: aliceblue;
-       
-    }
-    
-    .key:hover {
-        background-color: rgb(97, 87, 87);
-    }
-    
-    .key > span {
-        color: black;
-    }
-    
-    #zoneScoreEnCours{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin-top: .5rem;
-        margin-bottom: .5rem;
-        width: 80%;
-        text-decoration: underline;
-    }
-    
-    #historique{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        text-wrap: wrap;
-        margin-bottom: .5rem;
-        width: 70%;
-        border: 3px solid black;
-        border-radius: 15px; 
-    }
-    #historique > h2 {
-        width: 45%;
-    }
-    
-    i{
-        color: black;
-    }
+    margin-top: 5px;
+
+    color: white;
+}
