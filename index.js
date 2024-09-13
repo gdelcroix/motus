@@ -210,56 +210,13 @@ console.log(key);
 				lettres[i].classList.add("rouge");
                 lettres[i].classList.remove("orange");
                 }
-				alert("Victoire ! Vous avez trouvé le mot.");
+			alert("Victoire ! Vous avez trouvé le mot.");
+			startConfetti();
 
-    
-           
-function startConfetti () {
-const duration = 60 * 60 * 1000
-const animationEnd = Date.now() + duration;
-const defaults = { startVelocity: 30, spread: 360, ticks: 20, zIndex: 0 };
-
-
-function randomInRange(min, max) {
-	return Math.random() * (max - min) + min;
-}
-
-const interval = setInterval(function () {
-	const timeLeft = animationEnd - Date.now();
-
-	if (timeLeft <= 0) {
-		return clearInterval(interval);
-	}
-
-	const particleCount = 20 * (timeLeft / duration);
-
-	// since particles fall down, start a bit higher than random
-	confetti(
-		Object.assign({}, defaults, {
-			particleCount,
-			origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }
-		})
-	);
-	confetti(
-		Object.assign({}, defaults, {
-			particleCount,
-			origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }
-		})
-	);
-}, 250);
-}
-
-{
-    location.reload();
-
-}
-
-
-startConfetti ();
 				// et on relance un nouveau mot en augmentant le score de 1
 			setTimeout(() => {
                 console.log("pause 3s apres le bon mot");
-                resetjeu(true);
+				resetjeu(true);
             },3000);
             
 			return;
@@ -301,6 +258,7 @@ startConfetti ();
 function resetjeu(gagne){
     if (gagne == true){
         // actions spécifiques gagné
+		startConfetti();
         score.innerText = parseInt(score.innerText) + 1;
 console.log("gagné ");
         nbRounds.innerText = parseInt(nbRounds.innerText) + 1;
@@ -323,3 +281,37 @@ console.log("resetjeu globales");
     bidule();
     }
 
+function startConfetti() {
+	const duration = 60 * 60 * 1000
+	const animationEnd = Date.now() + duration;
+	const defaults = { startVelocity: 30, spread: 360, ticks: 20, zIndex: 0 };
+		
+	function randomInRange(min, max) {
+		return Math.random() * (max - min) + min;
+		}
+		
+	const interval = setInterval(function () {
+		const timeLeft = animationEnd - Date.now();
+		if (timeLeft <= 0) {
+			return clearInterval(interval);
+			}
+		
+		const particleCount = 20 * (timeLeft / duration);
+		
+		// since particles fall down, start a bit higher than random
+		confetti(Object.assign({}, defaults, {
+			particleCount,
+			origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }
+			}));
+		confetti(Object.assign({}, defaults, {
+			particleCount,
+			origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }
+			}));
+		}, 250);
+
+		setTimeout(function() {
+			clearInterval(interval);
+			}, 2000);
+		}
+		
+	
