@@ -191,10 +191,9 @@ const interval = setInterval(function () {
 }
 
 {
-    location.reload();
-
-}
-
+    setTimeout(function() {
+        location.reload()
+}, 3000);}
 
 startConfetti ();
 
