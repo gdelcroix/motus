@@ -143,6 +143,8 @@ h1{
 #zoneClavier{
     width: 70%;
 }
+i{color: #000000 !important;
+}
 
 .keyboard{
     display: flex;
