@@ -19,7 +19,7 @@ let nbParties = document.getElementById("nbParties");
 nbParties.innerText = localStorage.getItem("nbParties");
 setDefaultLocale("nbRounds", 0);
 let nbRounds = document.getElementById("nbRounds");
-nbRounds.innerText = localStorage.getItem("nbRounds");
+nbRounds.innerText = parseInt(localStorage.getItem("nbRounds"));
 setDefaultLocale("nbMotsTrouves", 0);
 let nbMotsTrouves = document.getElementById("nbMotsTrouves");
 nbMotsTrouves.innerText = localStorage.getItem("nbMotsTrouves");
@@ -31,14 +31,14 @@ let donneesTransverses = {
 	nbgrilleMot: null,
 	rangee: 0,
 	saisie: 1,
-	nbRounds: localStorage.getItem("nbRounds"),
+	nbRounds: parseInt(localStorage.getItem("nbRounds")),
 }
 
 nbRounds.innerText = donneesTransverses.nbRounds;
-console.log(parseInt(donneesTransverses.nbRounds));
+console.log("nb rounds " + donneesTransverses.nbRounds);
 
 setDefaultLocale("totalCoups", 0);
-
+let totalCoups = localStorage.getItem("totalCoups");
 const dictionnaire_list = [
 		"ABACA",
 		"PRIMO",
@@ -64,10 +64,8 @@ function nouvellePartie(zero) {
 	if (zero) {
 		score.innerText = 0;
 		nbRounds.innerText = 0;
-
-console.log(parseInt(nbRounds.innerText));
-
-		tableJeu.innerHTML = "";};
+	};
+	tableJeu.innerHTML = "";
 	donneesTransverses.mot = unMotRandom();
 console.log(donneesTransverses.mot);
     donneesTransverses.nbgrilleMot = donneesTransverses.mot.length;
@@ -232,7 +230,6 @@ function bidule() {
 
 	// on compare le mot saisi avec le mot du dictionnaire
 function compareMot() {
-	bidule();
 	let lettres = majligne();
 		// on concatène pour comparer les lettres de la grille et le mot du dictionnaire
 	let motSaisi = "";
@@ -300,13 +297,20 @@ function resetjeu(gagne){
 		nbRounds.innerText = donneesTransverses.nbRounds;
 		nbMotsTrouves.innerText = parseInt(nbMotsTrouves.innerText) + 1;
 		localStorage.setItem("nbMotsTrouves", parseInt(nbMotsTrouves.innerText));
-		let totalCoups = localStorage.getItem("totalCoups") + parseInt(donneesTransverses.rangee);
-		nbEssais = parseFloat((totalCoups + donneesTransverses.rangee) / donneesTransverses.nbRounds);
+console.log("coups en localstorage"+ localStorage.getItem("totalCoups"));		
+		let totalCoups = parseInt(localStorage.getItem("totalCoups")) + parseInt(donneesTransverses.rangee);
+console.log("coups total "+ totalCoups);
+console.log("nbRounds "+ donneesTransverses.nbRounds);
+console.log("nbEssais 1 "+ nbEssais.innerText);
+		nbEssais.innerText = parseFloat((totalCoups / donneesTransverses.nbRounds).toFixed(2));
+console.log("nbEssais 2 "+ nbEssais.innerText);
 		localStorage.setItem("totalCoups", totalCoups);
 		localStorage.setItem("nbRounds", nbRounds.innerText);
     }
     else if (gagne == false){
         // actions spécifiques perdu
+		nbParties.innerText = parseInt(nbParties.innerText) + 1;
+		localStorage.setItem("nbParties", parseInt(nbParties.innerText));
 		setTimeout(() => {
 			console.log("pause 3s apres le mot");
 			console.log("perdu ");
@@ -321,7 +325,6 @@ function resetjeu(gagne){
 	
     // actions qui ont lieu toujours pour un nouveau mot
 console.log("resetjeu globales");
-    tableJeu.innerHTML = "";
     if (window.confirm("voulez-vous continuer ?")){
 		nouvellePartie(false);
 		bidule();
